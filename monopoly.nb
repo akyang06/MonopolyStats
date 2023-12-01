@@ -1,0 +1,228 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+BoxData[{RowBox[{RowBox[{"(*"," ",RowBox[{"Define"," ","the"," ","sample"," ","space"," ","and"," ","probabilities"}]," ","*)"}],"\n",RowBox[
+{"sampleSpace","=",RowBox[{"Import","[",RowBox[{"\"square_names_2.txt\"",","," ","\"list\""}],"]"}]}]}],"\n",RowBox[
+{"probabilities","=",RowBox[{"Import","[",RowBox[{"\"square_percentages_2.txt\"",","," ","\"list\""}],"]"}]}]}],
+"Input",CellLabel -> "In[259]:= ",ExpressionUUID -> "1121a57c-f218-42f0-a1a6-3d0a53d1887f"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"\"Go\"",",","\"Mediterranean Avenue\"",",","\"Community Chest 1\"",",","\"Baltic Avenue\"",",","\"Income Tax\"",",","\"Reading Railroad\"",",","\"Oriental Avenue\"",",","\"Chance 1\"",",","\"Vermont Avenue\"",",","\"Connecticut Avenue\"",",","\"Jail / Just Visiting\"",",","\"St. Charles Place\"",",","\"Electric Company\"",",","\"States Avenue\"",",","\"Virginia Avenue\"",",","\"Pennsylvania Railroad\"",",","\"St. James Place\"",",","\"Community Chest 2\"",",","\"Tennessee Avenue\"",",","\"New York Avenue\"",",","\"Free Parking\"",",","\"Kentucky Avenue\"",",","\"Chance 2\"",",","\"Indiana Avenue\"",",","\"Illinois Avenue\"",",","\"B. & O. Railroad\"",",","\"Atlantic Avenue\"",",","\"Ventnor Avenue\"",",","\"Water Works\"",",","\"Marvin Gardens\"",",","\"Go to Jail\"",",","\"Pacific Avenue\"",",","\"North Carolina Avenue\"",",","\"Community Chest 3\"",",","\"Pennsylvania Avenue\"",",","\"Short Line\"",",","\"Chance 3\"",",","\"Park Place\"",",","\"Luxury Tax\"",",","\"Boardwalk\""}],"}"}],
+StandardForm],"Output",CellLabel -> "Out[259]= ",ExpressionUUID -> "36540dfe-9a50-4af9-a953-39c4435c96d6"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"0.015396919421630071`",",","0.01568445215356357`",",","0.017532626267465122`",",","0.01925676808698662`",",","0.020984261566285536`",",","0.022931732516583616`",",","0.025176926915147793`",",","0.026797825083955423`",",","0.025416721988195393`",",","0.023809272223728323`",",","0.05222033155662649`",",","0.022119837311060882`",",","0.023455499835632936`",",","0.024720934124494887`",",","0.02728782521384529`",",","0.031024811011286176`",",","0.03401286268874282`",",","0.03724968896388439`",",","0.03609593490237231`",",","0.034204168328748834`",",","0.032474858061907017`",",","0.030594096626618127`",",","0.028513989744380498`",",","0.026511952519949058`",",","0.025263579327898033`",",","0.025907077122547667`",",","0.02606955431194476`",",","0.0258956752145198`",",","0.025239209315684626`",",","0.02461903740247662`",",","0.`",",","0.02569619403057073`",",","0.024724337990810898`",",","0.024060855533189346`",",","0.023462234479110933`",",","0.02234353188760759`",",","0.0204183113640562`",",","0.018535127545376773`",",","0.017685299068915177`",",","0.016605678292199662`"}],"}"}],
+StandardForm],"Output",CellLabel -> "Out[260]= ",ExpressionUUID -> "9492666f-336d-467c-81b0-87738c9046f8"]},
+Open],ExpressionUUID -> "77491611-18bc-4ef4-805f-990194c4de74"],Cell[
+CellGroupData[
+{Cell[
+BoxData[{RowBox[{"\n",RowBox[{"topfivenames","=",RowBox[{"{","}"}]}]}],"\n",RowBox[
+{"topfiveprobs","=",RowBox[{"{","}"}]}],"\n",RowBox[{"max","=",RowBox[{"First","[",RowBox[
+{"First","[",RowBox[{"Position","[",RowBox[{"probabilities",",",RowBox[{"Max","[","probabilities","]"}]}],"]"}],"]"}],"]"}]}],"\n",RowBox[
+{"topfivenames","=",RowBox[{"Append","[",RowBox[{"topfivenames",",",RowBox[{"Part","[",RowBox[
+{"sampleSpace",",","max"}],"]"}]}],"]"}]}],"\n",RowBox[{"topfiveprobs","=",RowBox[
+{"Append","[",RowBox[{"topfiveprobs",",",RowBox[{"Part","[",RowBox[{"probabilities",",","max"}],"]"}]}],"]"}]}],"\n",RowBox[
+{RowBox[{"probabilities","=",RowBox[{"Delete","[",RowBox[{"probabilities",",","max"}],"]"}]}],";"}],"\n",RowBox[
+{RowBox[{"sampleSpace","=",RowBox[{"Delete","[",RowBox[{"sampleSpace",",","max"}],"]"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{"max","=",RowBox[{"First","[",RowBox[{"First","[",RowBox[{"Position","[",RowBox[
+{"probabilities",",",RowBox[{"Max","[","probabilities","]"}]}],"]"}],"]"}],"]"}]}],"\n",RowBox[
+{"topfivenames","=",RowBox[{"Append","[",RowBox[{"topfivenames",",",RowBox[{"Part","[",RowBox[
+{"sampleSpace",",","max"}],"]"}]}],"]"}]}],"\n",RowBox[{"topfiveprobs","=",RowBox[
+{"Append","[",RowBox[{"topfiveprobs",",",RowBox[{"Part","[",RowBox[{"probabilities",",","max"}],"]"}]}],"]"}]}],"\n",RowBox[
+{RowBox[{"probabilities","=",RowBox[{"Delete","[",RowBox[{"probabilities",",","max"}],"]"}]}],";"}],"\n",RowBox[
+{RowBox[{"sampleSpace","=",RowBox[{"Delete","[",RowBox[{"sampleSpace",",","max"}],"]"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{"max","=",RowBox[{"First","[",RowBox[{"First","[",RowBox[{"Position","[",RowBox[
+{"probabilities",",",RowBox[{"Max","[","probabilities","]"}]}],"]"}],"]"}],"]"}]}],"\n",RowBox[
+{"topfivenames","=",RowBox[{"Append","[",RowBox[{"topfivenames",",",RowBox[{"Part","[",RowBox[
+{"sampleSpace",",","max"}],"]"}]}],"]"}]}],"\n",RowBox[{"topfiveprobs","=",RowBox[
+{"Append","[",RowBox[{"topfiveprobs",",",RowBox[{"Part","[",RowBox[{"probabilities",",","max"}],"]"}]}],"]"}]}],"\n",RowBox[
+{RowBox[{"probabilities","=",RowBox[{"Delete","[",RowBox[{"probabilities",",","max"}],"]"}]}],";"}],"\n",RowBox[
+{RowBox[{"sampleSpace","=",RowBox[{"Delete","[",RowBox[{"sampleSpace",",","max"}],"]"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{"max","=",RowBox[{"First","[",RowBox[{"First","[",RowBox[{"Position","[",RowBox[
+{"probabilities",",",RowBox[{"Max","[","probabilities","]"}]}],"]"}],"]"}],"]"}]}],"\n",RowBox[
+{"topfivenames","=",RowBox[{"Append","[",RowBox[{"topfivenames",",",RowBox[{"Part","[",RowBox[
+{"sampleSpace",",","max"}],"]"}]}],"]"}]}],"\n",RowBox[{"topfiveprobs","=",RowBox[
+{"Append","[",RowBox[{"topfiveprobs",",",RowBox[{"Part","[",RowBox[{"probabilities",",","max"}],"]"}]}],"]"}]}],"\n",RowBox[
+{RowBox[{"probabilities","=",RowBox[{"Delete","[",RowBox[{"probabilities",",","max"}],"]"}]}],";"}],"\n",RowBox[
+{RowBox[{"sampleSpace","=",RowBox[{"Delete","[",RowBox[{"sampleSpace",",","max"}],"]"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{"max","=",RowBox[{"First","[",RowBox[{"First","[",RowBox[{"Position","[",RowBox[
+{"probabilities",",",RowBox[{"Max","[","probabilities","]"}]}],"]"}],"]"}],"]"}]}],"\n",RowBox[
+{RowBox[{"(*",RowBox[{RowBox[{"topfive","=",RowBox[{"Append","[",RowBox[{"topfive",",",RowBox[
+{"{",RowBox[{RowBox[{"Part","[",RowBox[{"sampleSpace",",","max"}],"]"}],","," ",RowBox[
+{"Part","[",RowBox[{"probabilities",","," ","max"}],"]"}]}],"}"}]}],"]"}]}],";"}],"*)"}],"\n",RowBox[
+{"topfivenames","=",RowBox[{"Append","[",RowBox[{"topfivenames",",",RowBox[{"Part","[",RowBox[
+{"sampleSpace",",","max"}],"]"}]}],"]"}]}]}],"\n",RowBox[{"topfiveprobs","=",RowBox[
+{"Append","[",RowBox[{"topfiveprobs",",",RowBox[{"Part","[",RowBox[{"probabilities",",","max"}],"]"}]}],"]"}]}],"\n",RowBox[
+{RowBox[{"probabilities","=",RowBox[{"Delete","[",RowBox[{"probabilities",",","max"}],"]"}]}],";"}],"\n",RowBox[
+{RowBox[{"sampleSpace","=",RowBox[{"Delete","[",RowBox[{"sampleSpace",",","max"}],"]"}]}],";"}],RowBox[
+{"\n","\n"}],"topfivenames","\n",RowBox[{"topfiveprobs","\n","\n","\n"}]}],"Input",
+CellLabel -> "In[261]:= ",ExpressionUUID -> "b6c55756-d5e9-4eb9-813b-7270ac7bd097"],Cell[
+BoxData[
+RowBox[{"{","}"}],StandardForm],"Output",CellLabel -> "Out[261]= ",ExpressionUUID -> "1184f4a3-8620-42ab-8c3c-365d379e3cc2"],Cell[
+BoxData[
+RowBox[{"{","}"}],StandardForm],"Output",CellLabel -> "Out[262]= ",ExpressionUUID -> "442e43e8-000d-4f5a-8653-64886441aef9"],Cell[
+BoxData[
+"11",StandardForm],"Output",CellLabel -> "Out[263]= ",ExpressionUUID -> "bc9e93b0-c16e-4f54-8015-a5c58ed68fe7"],Cell[
+BoxData[
+RowBox[{"{","\"Jail / Just Visiting\"","}"}],StandardForm],"Output",CellLabel -> "Out[264]= ",
+ExpressionUUID -> "e475cb6c-dd45-4bc7-8310-a5c5dbf16e96"],Cell[
+BoxData[RowBox[{"{","0.05222033155662649`","}"}],
+StandardForm],"Output",CellLabel -> "Out[265]= ",ExpressionUUID -> "d240c819-f6ef-4e5c-bc32-6dd5478ade7e"],Cell[
+BoxData[
+"17",StandardForm],"Output",CellLabel -> "Out[268]= ",ExpressionUUID -> "7b80e0f1-bf18-4b1a-a091-7217bff1591a"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"\"Jail / Just Visiting\"",",","\"Community Chest 2\""}],"}"}],
+StandardForm],"Output",CellLabel -> "Out[269]= ",ExpressionUUID -> "86f99a8b-d2a5-496c-8924-37f44b27ea0d"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"0.05222033155662649`",",","0.03724968896388439`"}],"}"}],StandardForm],
+"Output",CellLabel -> "Out[270]= ",ExpressionUUID -> "96567edc-05e6-4760-8acd-3d54042bc1ec"],Cell[
+BoxData[
+"17",StandardForm],"Output",CellLabel -> "Out[273]= ",ExpressionUUID -> "b85edcc1-a708-462c-bc22-d2f007d9429c"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"\"Jail / Just Visiting\"",",","\"Community Chest 2\"",",","\"Tennessee Avenue\""}],"}"}],
+StandardForm],"Output",CellLabel -> "Out[274]= ",ExpressionUUID -> "9f323bf4-6e85-487c-9bdc-6404c4ff7677"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"0.05222033155662649`",",","0.03724968896388439`",",","0.03609593490237231`"}],"}"}],
+StandardForm],"Output",CellLabel -> "Out[275]= ",ExpressionUUID -> "33960731-07f7-4fa4-8b40-0226d3d24850"],Cell[
+BoxData[
+"17",StandardForm],"Output",CellLabel -> "Out[278]= ",ExpressionUUID -> "58c33cb8-0f66-43ea-8cf0-fb2ab9293198"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"\"Jail / Just Visiting\"",",","\"Community Chest 2\"",",","\"Tennessee Avenue\"",",","\"New York Avenue\""}],"}"}],
+StandardForm],"Output",CellLabel -> "Out[279]= ",ExpressionUUID -> "14334f65-15ac-4801-bb75-511b4e6819aa"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"0.05222033155662649`",",","0.03724968896388439`",",","0.03609593490237231`",",","0.034204168328748834`"}],"}"}],
+StandardForm],"Output",CellLabel -> "Out[280]= ",ExpressionUUID -> "74241476-677d-4873-a868-b510d4f3345f"],Cell[
+BoxData[
+"16",StandardForm],"Output",CellLabel -> "Out[283]= ",ExpressionUUID -> "90629204-2979-4c2f-86b9-aab3645896fc"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"\"Jail / Just Visiting\"",",","\"Community Chest 2\"",",","\"Tennessee Avenue\"",",","\"New York Avenue\"",",","\"St. James Place\""}],"}"}],
+StandardForm],"Output",CellLabel -> "Out[284]= ",ExpressionUUID -> "8aabc575-f378-488d-9ae0-d88f816194ec"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"0.05222033155662649`",",","0.03724968896388439`",",","0.03609593490237231`",",","0.034204168328748834`",",","0.03401286268874282`"}],"}"}],
+StandardForm],"Output",CellLabel -> "Out[285]= ",ExpressionUUID -> "39a2e992-b97a-41ea-9177-cf6c6ee22fbf"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"\"Jail / Just Visiting\"",",","\"Community Chest 2\"",",","\"Tennessee Avenue\"",",","\"New York Avenue\"",",","\"St. James Place\""}],"}"}],
+StandardForm],"Output",CellLabel -> "Out[288]= ",ExpressionUUID -> "c22819d9-4958-4072-a4da-24cdee9020ef"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"0.05222033155662649`",",","0.03724968896388439`",",","0.03609593490237231`",",","0.034204168328748834`",",","0.03401286268874282`"}],"}"}],
+StandardForm],"Output",CellLabel -> "Out[289]= ",ExpressionUUID -> "b3f68114-004e-4e9e-86e4-4483dec479d6"]},
+Open],ExpressionUUID -> "54ee7c61-67fe-4ebf-8620-4a902dd0a5a1"],Cell[
+CellGroupData[
+{Cell[
+BoxData[""],"Input",ExpressionUUID -> "d052f8e4-2741-42b6-9443-555a75fd11bf"],Cell[
+BoxData[
+RowBox[{"{","}"}],StandardForm],"Output",CellLabel -> "Out[92]= ",ExpressionUUID -> "52e59016-b8f5-4cd1-a151-624af3919375"],Cell[
+BoxData[
+"0",StandardForm],"Output",CellLabel -> "Out[93]= ",ExpressionUUID -> "131a8b97-600b-4dd6-be47-7e99f555f312"]},
+Open],ExpressionUUID -> "6271896e-36e0-459d-9936-a370a1fd6b71"],Cell[
+BoxData[TemplateBox[
+{"Delete","psl","\"Position specification \\!\\(\\*TagBox[RowBox[{\\\"8\\\", \\\" \\\", \\\"\\\\\\\"Chance 1\\\\\\\"\\\"}], Short[#1, 5] & ]\\) in \\!\\(\\*TagBox[RowBox[{\\\"{\\\", RowBox[{\\\"0.024391`\\\", \\\",\\\", \\\"0.0244577`\\\", \\\",\\\", \\\"0.0246284`\\\", \\\",\\\", \\\"0.0248225`\\\", \\\",\\\", \\\"0.0250736`\\\", \\\",\\\", \\\"0.0254185`\\\", \\\",\\\", \\\"0.0256284`\\\", \\\",\\\", \\\"0.0258721`\\\", \\\",\\\", \\\"0.02582`\\\", \\\",\\\", \\\"0.0256523`\\\", \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"30\\\", \\\"\[RightSkeleton]\\\"}]}], \\\"}\\\"}], Short[#1, 5] & ]\\) is not a machine-sized integer or a list of machine-sized integers.\"",2,94,45,18085331568598430303,"Local"},
+"MessageTemplate"],StandardForm],"MSG","Message",ExpressionUUID -> "ac9d61a8-f6dd-4859-a4f1-83b95ffe0465"],Cell[
+BoxData[
+TemplateBox[{"Delete","psl","\"Position specification \\!\\(\\*TagBox[RowBox[{\\\"8\\\", \\\" \\\", \\\"\\\\\\\"Chance 1\\\\\\\"\\\"}], Short[#1, 5] & ]\\) in \\!\\(\\*TagBox[RowBox[{\\\"{\\\", RowBox[{\\\"\\\\\\\"Go\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Mediterranean Avenue\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Community Chest 1\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Baltic Avenue\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Income Tax\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Reading Railroad\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Oriental Avenue\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Chance 1\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Vermont Avenue\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Connecticut Avenue\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"30\\\", \\\"\[RightSkeleton]\\\"}]}], \\\"}\\\"}], Short[#1, 5] & ]\\) is not a machine-sized integer or a list of machine-sized integers.\"",2,94,46,18085331568598430303,"Local"},
+"MessageTemplate"],StandardForm],"MSG","Message",ExpressionUUID -> "fc4a3a1b-05db-4a5b-a155-3823319bd84c"],Cell[
+BoxData[
+TemplateBox[{"Part","pkspec1","\"The expression \\!\\(\\*TagBox[RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"8\\\", \\\" \\\", \\\"\\\\\\\"Chance 1\\\\\\\"\\\"}], \\\",\\\", \\\"0.2069768`\\\"}], \\\"}\\\"}], \\\"}\\\"}], Short[#1, 5] & ]\\) cannot be used as a part specification.\"",2,94,47,18085331568598430303,"Local"},
+"MessageTemplate"],StandardForm],"MSG","Message",ExpressionUUID -> "41d56fdf-ce00-4fe2-8831-259b7d30603f"],Cell[
+BoxData[
+TemplateBox[{"Part","pkspec1","\"The expression \\!\\(\\*TagBox[RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"8\\\", \\\" \\\", \\\"\\\\\\\"Chance 1\\\\\\\"\\\"}], \\\",\\\", \\\"0.2069768`\\\"}], \\\"}\\\"}], \\\"}\\\"}], Short[#1, 5] & ]\\) cannot be used as a part specification.\"",2,94,48,18085331568598430303,"Local"},
+"MessageTemplate"],StandardForm],"MSG","Message",ExpressionUUID -> "530309bb-c5a9-4836-ba7f-0be9e7b50252"],Cell[
+BoxData[
+TemplateBox[{"Delete","psl","\"Position specification \\!\\(\\*TagBox[RowBox[{\\\"8\\\", \\\" \\\", RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"\\\\\\\"Go\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Mediterranean Avenue\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Community Chest 1\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Baltic Avenue\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Income Tax\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Reading Railroad\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Oriental Avenue\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Chance 1\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Vermont Avenue\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Connecticut Avenue\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"30\\\", \\\"\[RightSkeleton]\\\"}]}], \\\"}\\\"}], \\\"\[LeftDoubleBracket]\\\", RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"8\\\", \\\" \\\", \\\"\\\\\\\"Chance 1\\\\\\\"\\\"}], \\\",\\\", \\\"0.2069768`\\\"}], \\\"}\\\"}], \\\"}\\\"}], \\\"\[RightDoubleBracket]\\\"}]}], Short[#1, 5] & ]\\) in \\!\\(\\*TagBox[RowBox[{\\\"{\\\", RowBox[{\\\"0.024391`\\\", \\\",\\\", \\\"0.0244577`\\\", \\\",\\\", \\\"0.0246284`\\\", \\\",\\\", \\\"0.0248225`\\\", \\\",\\\", \\\"0.0250736`\\\", \\\",\\\", \\\"0.0254185`\\\", \\\",\\\", \\\"0.0256284`\\\", \\\",\\\", \\\"0.0258721`\\\", \\\",\\\", \\\"0.02582`\\\", \\\",\\\", \\\"0.0256523`\\\", \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"30\\\", \\\"\[RightSkeleton]\\\"}]}], \\\"}\\\"}], Short[#1, 5] & ]\\) is not a machine-sized integer or a list of machine-sized integers.\"",2,94,49,18085331568598430303,"Local"},
+"MessageTemplate"],StandardForm],"MSG","Message",ExpressionUUID -> "6ffcc09c-9fd2-47f7-9034-bc55f7c1c7be"],Cell[
+BoxData[
+TemplateBox[{"General","stop","\"Further output of \\!\\(\\*TagBox[StyleBox[RowBox[{\\\"Delete\\\", \\\"::\\\", \\\"psl\\\"}], \\\"MessageName\\\"], Short[#1, 5] & ]\\) will be suppressed during this calculation.\"",2,94,50,18085331568598430303,"Local"},
+"MessageTemplate"],StandardForm],"MSG","Message",ExpressionUUID -> "a8fa67a3-24a0-4a37-a7eb-d42ba6730c39"],Cell[
+BoxData[
+TemplateBox[{"Part","pkspec1","\"The expression \\!\\(\\*TagBox[RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"8\\\", \\\" \\\", RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"\\\\\\\"Go\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Mediterranean Avenue\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Community Chest 1\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Baltic Avenue\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Income Tax\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Reading Railroad\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Oriental Avenue\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Chance 1\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Vermont Avenue\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Connecticut Avenue\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"30\\\", \\\"\[RightSkeleton]\\\"}]}], \\\"}\\\"}], \\\"\[LeftDoubleBracket]\\\", RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"8\\\", \\\" \\\", \\\"\\\\\\\"Chance 1\\\\\\\"\\\"}], \\\",\\\", \\\"0.2069768`\\\"}], \\\"}\\\"}], \\\"}\\\"}], \\\"\[RightDoubleBracket]\\\"}]}], \\\",\\\", RowBox[{\\\"8\\\", \\\" \\\", RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"0.024391`\\\", \\\",\\\", \\\"0.0244577`\\\", \\\",\\\", \\\"0.0246284`\\\", \\\",\\\", \\\"0.0248225`\\\", \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"4\\\", \\\"\[RightSkeleton]\\\"}], \\\",\\\", \\\"0.02582`\\\", \\\",\\\", \\\"0.0256523`\\\", \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"30\\\", \\\"\[RightSkeleton]\\\"}]}], \\\"}\\\"}], \\\"\[LeftDoubleBracket]\\\", RowBox[{\\\"{\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"}\\\"}], \\\"\[RightDoubleBracket]\\\"}]}]}], \\\"}\\\"}], \\\"}\\\"}], Short[#1, 5] & ]\\) cannot be used as a part specification.\"",2,94,51,18085331568598430303,"Local"},
+"MessageTemplate"],StandardForm],"MSG","Message",ExpressionUUID -> "d8b41d82-c179-4740-8921-4e0c00135892"],Cell[
+BoxData[
+TemplateBox[{"General","stop","\"Further output of \\!\\(\\*TagBox[StyleBox[RowBox[{\\\"Part\\\", \\\"::\\\", \\\"pkspec1\\\"}], \\\"MessageName\\\"], Short[#1, 5] & ]\\) will be suppressed during this calculation.\"",2,94,52,18085331568598430303,"Local"},
+"MessageTemplate"],StandardForm],"MSG","Message",ExpressionUUID -> "d8eea2f4-1a84-4d5a-9265-3c6c3a94e401"],Cell[
+BoxData[
+""],"Input",ExpressionUUID -> "4f8bf87b-f582-4268-bed9-39ff72dd2e02"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"BarChart","[",RowBox[{"topfiveprobs",","," ",RowBox[{"ChartLabels"," ","\[Rule]"," ","topfivenames"}]}],"]"}]],
+"Input",CellLabel -> "In[290]:= ",ExpressionUUID -> "5e8dc1e2-3b60-4383-8cc1-2caadca6c8ff"],Cell[
+BoxData[
+GraphicsBox[{{Opacity[0],PointBox[{{0.45075018208302986`,0.`},{5.451201747997087`,0.`}}]},{{},{Directive[
+EdgeForm[Directive[Thickness[Small],Opacity[0.6649999999999999`]]],RGBColor[0.982864`,
+0.7431472`,0.3262672`]],{{Directive[EdgeForm[Directive[Thickness[Small],Opacity[0.6649999999999999`]]],
+RGBColor[0.982864`,0.7431472`,0.3262672`]],TagBox[TooltipBox[TagBox[RectangleBox[
+{0.5487982520029133`,0.`},{1.4512017479970867`,0.05222033155662649`},"RoundingRadius" -> 0],
+Function[StatusArea[Slot[1],0.05222033155662649`]],TagBoxNote -> "0.05222033155662649"],
+StyleBox["0.05222033155662649`",{},StripOnInput -> False]],Function[Annotation[Slot[
+1],Style[0.05222033155662649`,{}],"Tooltip"]]]},{Directive[EdgeForm[Directive[Thickness[
+Small],Opacity[0.6649999999999999`]]],RGBColor[0.982864`,0.7431472`,0.3262672`]],TagBox[
+TooltipBox[TagBox[RectangleBox[{1.5487982520029133`,0.`},{2.4512017479970867`,0.03724968896388439`},
+"RoundingRadius" -> 0],Function[StatusArea[Slot[1],0.03724968896388439`]],TagBoxNote -> "0.03724968896388439"],
+StyleBox["0.03724968896388439`",{},StripOnInput -> False]],Function[Annotation[Slot[
+1],Style[0.03724968896388439`,{}],"Tooltip"]]]},{Directive[EdgeForm[Directive[Thickness[
+Small],Opacity[0.6649999999999999`]]],RGBColor[0.982864`,0.7431472`,0.3262672`]],TagBox[
+TooltipBox[TagBox[RectangleBox[{2.5487982520029133`,0.`},{3.4512017479970867`,0.03609593490237231`},
+"RoundingRadius" -> 0],Function[StatusArea[Slot[1],0.03609593490237231`]],TagBoxNote -> "0.03609593490237231"],
+StyleBox["0.03609593490237231`",{},StripOnInput -> False]],Function[Annotation[Slot[
+1],Style[0.03609593490237231`,{}],"Tooltip"]]]},{Directive[EdgeForm[Directive[Thickness[
+Small],Opacity[0.6649999999999999`]]],RGBColor[0.982864`,0.7431472`,0.3262672`]],TagBox[
+TooltipBox[TagBox[RectangleBox[{3.5487982520029133`,0.`},{4.451201747997087`,0.034204168328748834`},
+"RoundingRadius" -> 0],Function[StatusArea[Slot[1],0.034204168328748834`]],TagBoxNote -> "0.034204168328748834"],
+StyleBox["0.034204168328748834`",{},StripOnInput -> False]],Function[Annotation[Slot[
+1],Style[0.034204168328748834`,{}],"Tooltip"]]]},{Directive[EdgeForm[Directive[Thickness[
+Small],Opacity[0.6649999999999999`]]],RGBColor[0.982864`,0.7431472`,0.3262672`]],TagBox[
+TooltipBox[TagBox[RectangleBox[{4.548798252002913`,0.`},{5.451201747997087`,0.03401286268874282`},
+"RoundingRadius" -> 0],Function[StatusArea[Slot[1],0.03401286268874282`]],TagBoxNote -> "0.03401286268874282"],
+StyleBox["0.03401286268874282`",{},StripOnInput -> False]],Function[Annotation[Slot[
+1],Style[0.03401286268874282`,{}],"Tooltip"]]]}}},{},{}},{},{},{},{},{StyleBox[{Antialiasing -> False,{Directive[
+Thickness[Tiny]],{LineBox[{{0.45075018208302986`,0.`},{5.551210779315368`,0.`}}]},StyleBox[
+{},{"GraphicsLabel"},StripOnInput -> False]},StyleBox[{{Directive[Thickness[Tiny]],LineBox[
+{{0.5487982520029133`,0.`},Offset[{-1.102182119232618`*^-15,-6.`},{0.5487982520029133`,0.`}]}],LineBox[
+{{5.451201747997087`,0.`},Offset[{-1.102182119232618`*^-15,-6.`},{5.451201747997087`,0.`}]}],{{},{},{},{},{},{LineBox[
+{{1.4512017479970867`,0.`},Offset[{-7.347880794884119`*^-16,-4.`},{1.4512017479970867`,0.`}]}],LineBox[
+{{1.5487982520029133`,0.`},Offset[{-7.347880794884119`*^-16,-4.`},{1.5487982520029133`,0.`}]}],LineBox[
+{{2.4512017479970867`,0.`},Offset[{-7.347880794884119`*^-16,-4.`},{2.4512017479970867`,0.`}]}],LineBox[
+{{2.5487982520029133`,0.`},Offset[{-7.347880794884119`*^-16,-4.`},{2.5487982520029133`,0.`}]}],LineBox[
+{{3.4512017479970867`,0.`},Offset[{-7.347880794884119`*^-16,-4.`},{3.4512017479970867`,0.`}]}],LineBox[
+{{3.5487982520029133`,0.`},Offset[{-7.347880794884119`*^-16,-4.`},{3.5487982520029133`,0.`}]}],LineBox[
+{{4.451201747997087`,0.`},Offset[{-7.347880794884119`*^-16,-4.`},{4.451201747997087`,0.`}]}],LineBox[
+{{4.548798252002913`,0.`},Offset[{-7.347880794884119`*^-16,-4.`},{4.548798252002913`,0.`}]}]},{}}},StyleBox[
+{Directive[Thickness[Tiny]],Directive[Thickness[Tiny]],StyleBox[{InsetBox[FormBox[
+"\"Jail / Just Visiting\"",TraditionalForm],Offset[{0,-2},{1.`,0.`}],NCache[ImageScaled[
+{Rational[1,2],1}],ImageScaled[{0.5`,1}]],Automatic,{1,0}],InsetBox[FormBox["\"Community Chest 2\"",
+TraditionalForm],Offset[{0,-2},{2.`,0.`}],NCache[ImageScaled[{Rational[1,2],1}],ImageScaled[
+{0.5`,1}]],Automatic,{1,0}],InsetBox[FormBox["\"Tennessee Avenue\"",TraditionalForm],
+Offset[{0,-2},{3.`,0.`}],NCache[ImageScaled[{Rational[1,2],1}],ImageScaled[{0.5`,1}]],
+Automatic,{1,0}],InsetBox[FormBox["\"New York Avenue\"",TraditionalForm],Offset[{0,-2},
+{4.`,0.`}],NCache[ImageScaled[{Rational[1,2],1}],ImageScaled[{0.5`,1}]],Automatic,
+{1,0}],InsetBox[FormBox["\"St. James Place\"",TraditionalForm],Offset[{0,-2},{5.`,0.`}],
+NCache[ImageScaled[{Rational[1,2],1}],ImageScaled[{0.5`,1}]],Automatic,{1,0}]},{{}},
+StripOnInput -> False]},{"GraphicsLabel"},StripOnInput -> False]},{"GraphicsTicks"},
+StripOnInput -> False]},{"GraphicsAxes"},StripOnInput -> False]}},{DisplayFunction -> Identity,AspectRatio -> NCache[
+Power[GoldenRatio,-1],0.6180339887498948`],Axes -> {False,True},AxesLabel -> {None,None},AxesOrigin -> {0.45075018208302986`,0.`},CoordinatesToolOptions -> CompressedData[
+"1:eJxTTMoPSmNiYGAoZgESPpnFJQheUGlOajA/kOGSWVyQk1jpVpqXXJKZn5fGCFLBASTgIqgmwOU9U1LzSjJLKhHyAYlFUHkQLzgnvyQTxAMT5OgDKUBzsTCQ4ZxfkJmaEpaYU5o6WF0NAFk5TEk="],FrameLabel -> {{None,None},{None,None}},FrameTicks -> {{Automatic,Automatic},{Automatic,Automatic}},GridLines -> {None,None},GridLinesStyle -> Directive[
+GrayLevel[0.5`,0.4`]],PlotRange -> {{All,All},{All,All}},PlotRangePadding -> {{Scaled[
+0.02`],Scaled[0.02`]},{Scaled[0.02`],Scaled[0.05`]}},Ticks -> {None,Automatic}}],
+StandardForm],"Output",CellLabel -> "Out[290]= ",ExpressionUUID -> "14bc7922-7089-477d-aa35-4dbb45b889eb"]},
+Open],ExpressionUUID -> "2d6281cf-6b44-4fae-8891-c3630aae0fb4"],Cell[
+BoxData[""],
+"Input",ExpressionUUID -> "e67b7336-867e-4bf3-a9d0-fe7fb488147c"],Cell[
+CellGroupData[
+{Cell[
+BoxData[""],"Input",ExpressionUUID -> "25cc2638-9582-480b-9543-7ea70e0fcbd5"],Cell[
+BoxData[
+GraphicsBox[{{{{Directive[RGBColor[0.368417`,0.506779`,0.709798`],AbsoluteThickness[
+2],PointSize[0.03`]],TagBox[{{{Directive[Opacity[0.2`],RGBColor[0.368417`,0.506779`,
+0.709798`],AbsoluteThickness[2],PointSize[0.03`]],LineBox[{},VertexColors -> None]},{Directive[
+Opacity[0.2`],RGBColor[0.368417`,0.506779`,0.709798`],AbsoluteThickness[2],PointSize[
+0.03`]],LineBox[CompressedData["1:eJxTTMoPSmNlYGAoZgESPpnFJWlMyLxURiADJAIBH+xnzQSBk/YYEjAWXv0MDhD9O9H1MzgQpZ/DwRgMLqPr5yBOvwBU2QV0/QLE6ReB2n8YXb8IXD8ADnknpQ=="],
+VertexColors -> None]}}},Function[Annotation[Slot[1],"Charting`Private`Tag$74491#1"]]]}},{TagBox[
+{{Directive[RGBColor[0.368417`,0.506779`,0.709798`],AbsoluteThickness[2],PointSize[
+0.03`]],{{},Null,PointBox[{{1.`,0.2`},{2.`,0.1`},{3.`,0.3`},{4.`,0.25`},{5.`,0.15`}}],{}}}},
+Function[Annotation[Slot[1],"Charting`Private`Tag$74491#1"]]]}},{},{}},{DisplayFunction -> Identity,AspectRatio -> NCache[
+Power[GoldenRatio,-1],0.6180339887498948`],Axes -> True,AxesOrigin -> {0,0},Frame -> True,FrameLabel -> {FormBox[
+"\"Outcome\"",TraditionalForm],FormBox["\"Probability\"",TraditionalForm]},FrameTicks -> {{Automatic,Automatic},{Automatic,Automatic}},GridLines -> {None,None},GridLinesStyle -> Directive[
+GrayLevel[0.5`,0.4`]],Method -> CompressedData["1:eJytlmtIFUEUx9fsiT3FoowiqegBWSIUfWny1bXSut2rQQ+o9d7Z6+S6cz2zm69vPaCiIEp6WPQQTHr5oSxS8kvYyz5UkFaapT00KUkx6ktWM3t9db1Z0Q7s7tmdmd858z+HnYlIow5llCRJbCi/JRGmK0N63hyGip2juZGMGZM9mCVi2c3Eh3jCXIB1bFep//gQbsTkEGaX3W6ieZQg0Tuc35wuWcVuyA8rtTXlFSC/aWGCihXZUPVYamhuGXKdeq6KmYgtxtBppqwTl9+k8L5JNpC96cTFVmo6BtmlE6opwYMsawQ31mNgfBxEm63TP6RQbqRwVkYyNRi2U0ZM6pD+VNNIAQOzYdxYIasMB3CUoCjYpbNBAxLrTCSedJVfuk+134wUnoCrQYn47tc5tj/GTon2HywRUjxQr0o0zH5ddwCpFMBYoZAZZwCjkEzduFecAFyvKrtwJtb0Qbki9BynkC1GVQP05TrF6xqq+bsY31cZvHjTzVLyCTFBwNIYVQ1evkIfJ8nDZPjA1fdDiDL3IcYNDNZUiQBPMNmOfSkeKRi22DiqUgDvkUPvZhU8RRB1pPXoniWNCO7uOrb6wvVmNDCgFF7CGVxs1i8df+InVW1qeRX5EcH3/Pa64gNvEFwtLJ1TEXnLIr7UvLFMamtCYFyuXJsa0YxgysHKl10d9yziP7n2ZVnq7jYELxaevjS59BmCubagoq13qi3iF+/Yd2FLK5e94+SCGWXTXyIg+6SS7Cyr9Hdcaxj6quw9gpNrp10sOFWPoH3K3kcjF1dYxD88NaE2fBWvn9K0jhO3qnl+zzRE3JZGtVrDJwICktneIyIe1sR9c8POr6nlbxFkdMyT7kTzvM6cFPVx0bk3FumCp94INla95nU5feKP7CpuSN3NGn5iUx7fqnhd+owa1L1PPLAo/vlLZ8eHljxHsLzm8zpbWWMP/4NFfBpydsy2iE8I0uO+tex4y+umrubh6Lq7Vyzi75eyYsoPtyC43tn1JKe1FkHS4jWbH0xutIhfZI+eWffpMQJT/ib+3/G8uF85N6f+L/m9P/IxwhE/PxDtH88kwkPvFrHC0MxThbnDOjNlVe3tCnBicsiaB//OXeFx0c6jn578pTg="],PlotRange -> {{0.`,6.`},{0.`,0.4`}},PlotRangeClipping -> True,PlotRangePadding -> {{0,0},{0,0}},Ticks -> {Automatic,Automatic}}],
+StandardForm],"Output",CellLabel -> "Out[6]= ",ExpressionUUID -> "fd293e7e-4a07-4fa9-9f22-952bbea118bc"]},
+Open],ExpressionUUID -> "a3215159-2d63-41c5-ac3a-dddb0bcabb1a"],Cell[
+BoxData[""],
+"Input",CellLabel -> "In[1]:= ",ExpressionUUID -> "49ee6621-9050-4877-bef4-2e4456a552e5"],Cell[
+BoxData[
+""],"Input",CellLabel -> "In[42]:= ",ExpressionUUID -> "f09e393b-af38-411b-9918-c664cd20a22c"]},
+StyleDefinitions -> "Default.nb",FrontEndVersion -> "13.3 for Wolfram Cloud 1.67.0.1 (October 23, 2023)"]
