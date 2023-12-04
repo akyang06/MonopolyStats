@@ -3,14 +3,14 @@ CellGroupData[{Cell[
 BoxData[{RowBox[{RowBox[{"(*"," ",RowBox[{"Define"," ","the"," ","sample"," ","space"," ","and"," ","probabilities"}]," ","*)"}],"\n",RowBox[
 {"sampleSpace","=",RowBox[{"Import","[",RowBox[{"\"square_names_2.txt\"",","," ","\"list\""}],"]"}]}]}],"\n",RowBox[
 {"probabilities","=",RowBox[{"Import","[",RowBox[{"\"square_percentages_2.txt\"",","," ","\"list\""}],"]"}]}]}],
-"Input",CellLabel -> "In[163]:= ",ExpressionUUID -> "1121a57c-f218-42f0-a1a6-3d0a53d1887f"],Cell[
+"Input",CellLabel -> "In[180]:= ",ExpressionUUID -> "1121a57c-f218-42f0-a1a6-3d0a53d1887f"],Cell[
 BoxData[
 RowBox[{"{",RowBox[{"\"Go\"",",","\"Mediterranean Avenue\"",",","\"Community Chest 1\"",",","\"Baltic Avenue\"",",","\"Income Tax\"",",","\"Reading Railroad\"",",","\"Oriental Avenue\"",",","\"Chance 1\"",",","\"Vermont Avenue\"",",","\"Connecticut Avenue\"",",","\"Jail / Just Visiting\"",",","\"St. Charles Place\"",",","\"Electric Company\"",",","\"States Avenue\"",",","\"Virginia Avenue\"",",","\"Pennsylvania Railroad\"",",","\"St. James Place\"",",","\"Community Chest 2\"",",","\"Tennessee Avenue\"",",","\"New York Avenue\"",",","\"Free Parking\"",",","\"Kentucky Avenue\"",",","\"Chance 2\"",",","\"Indiana Avenue\"",",","\"Illinois Avenue\"",",","\"B. & O. Railroad\"",",","\"Atlantic Avenue\"",",","\"Ventnor Avenue\"",",","\"Water Works\"",",","\"Marvin Gardens\"",",","\"Go to Jail\"",",","\"Pacific Avenue\"",",","\"North Carolina Avenue\"",",","\"Community Chest 3\"",",","\"Pennsylvania Avenue\"",",","\"Short Line\"",",","\"Chance 3\"",",","\"Park Place\"",",","\"Luxury Tax\"",",","\"Boardwalk\""}],"}"}],
-StandardForm],"Output",CellLabel -> "Out[163]= ",ExpressionUUID -> "c7c76abb-0b13-4376-a5e1-577486931626"],Cell[
+StandardForm],"Output",CellLabel -> "Out[180]= ",ExpressionUUID -> "dbb3b6b0-a3d4-4b9e-b66a-9bb346c1fcf3"],Cell[
 BoxData[
 RowBox[{"{",RowBox[{"0.015396919421630071`",",","0.01568445215356357`",",","0.017532626267465122`",",","0.01925676808698662`",",","0.020984261566285536`",",","0.022931732516583616`",",","0.025176926915147793`",",","0.026797825083955423`",",","0.025416721988195393`",",","0.023809272223728323`",",","0.05222033155662649`",",","0.022119837311060882`",",","0.023455499835632936`",",","0.024720934124494887`",",","0.02728782521384529`",",","0.031024811011286176`",",","0.03401286268874282`",",","0.03724968896388439`",",","0.03609593490237231`",",","0.034204168328748834`",",","0.032474858061907017`",",","0.030594096626618127`",",","0.028513989744380498`",",","0.026511952519949058`",",","0.025263579327898033`",",","0.025907077122547667`",",","0.02606955431194476`",",","0.0258956752145198`",",","0.025239209315684626`",",","0.02461903740247662`",",","0.`",",","0.02569619403057073`",",","0.024724337990810898`",",","0.024060855533189346`",",","0.023462234479110933`",",","0.02234353188760759`",",","0.0204183113640562`",",","0.018535127545376773`",",","0.017685299068915177`",",","0.016605678292199662`"}],"}"}],
-StandardForm],"Output",CellLabel -> "Out[164]= ",ExpressionUUID -> "fcdb40d9-ac8b-4fc7-9f60-a0873ed4406b"]},
-Open],ExpressionUUID -> "575b20b0-52c4-478e-9284-2ac8b0c9d0d6"],Cell[
+StandardForm],"Output",CellLabel -> "Out[181]= ",ExpressionUUID -> "42692d82-0679-4786-a430-9f0376deea96"]},
+Open],ExpressionUUID -> "5111f8f3-9f76-40dd-8c45-72652f78b3db"],Cell[
 CellGroupData[
 {Cell[
 BoxData[{RowBox[{"\n",RowBox[{"(*",RowBox[{"top"," ","five"," ","names"," ","and"," ","probs"}],"*)"}],"\n",RowBox[
@@ -76,116 +76,101 @@ BoxData[{RowBox[{"\n",RowBox[{"(*",RowBox[{"top"," ","five"," ","names"," ","and
 {"Append","[",RowBox[{"bottomfiveprobs",",",RowBox[{"Part","[",RowBox[{"probabilities",",","min"}],"]"}]}],"]"}]}],"\n",RowBox[
 {RowBox[{"probabilities","=",RowBox[{"Delete","[",RowBox[{"probabilities",",","min"}],"]"}]}],";"}],"\n",RowBox[
 {RowBox[{"sampleSpace","=",RowBox[{"Delete","[",RowBox[{"sampleSpace",",","min"}],"]"}]}],";"}],RowBox[
-{"\n","\n"}],RowBox[{"min","=",RowBox[{"First","[",RowBox[{"First","[",RowBox[{"Position","[",RowBox[
-{"probabilities",",",RowBox[{"Min","[","probabilities","]"}]}],"]"}],"]"}],"]"}]}],"\n",RowBox[
-{"bottomfivenames","=",RowBox[{"Append","[",RowBox[{"bottomfivenames",",",RowBox[
-{"Part","[",RowBox[{"sampleSpace",",","min"}],"]"}]}],"]"}]}],"\n",RowBox[{"bottomfiveprobs","=",RowBox[
-{"Append","[",RowBox[{"bottomfiveprobs",",",RowBox[{"Part","[",RowBox[{"probabilities",",","min"}],"]"}]}],"]"}]}],"\n",RowBox[
-{RowBox[{"probabilities","=",RowBox[{"Delete","[",RowBox[{"probabilities",",","min"}],"]"}]}],";"}],"\n",RowBox[
-{RowBox[{"sampleSpace","=",RowBox[{"Delete","[",RowBox[{"sampleSpace",",","min"}],"]"}]}],";"}],RowBox[
-{"\n","\n"}],RowBox[{"min","=",RowBox[{"First","[",RowBox[{"First","[",RowBox[{"Position","[",RowBox[
-{"probabilities",",",RowBox[{"Min","[","probabilities","]"}]}],"]"}],"]"}],"]"}]}],"\n",RowBox[
-{"bottomfivenames","=",RowBox[{"Append","[",RowBox[{"bottomfivenames",",",RowBox[
-{"Part","[",RowBox[{"sampleSpace",",","min"}],"]"}]}],"]"}]}],"\n",RowBox[{"bottomfiveprobs","=",RowBox[
-{"Append","[",RowBox[{"bottomfiveprobs",",",RowBox[{"Part","[",RowBox[{"probabilities",",","min"}],"]"}]}],"]"}]}],"\n",RowBox[
-{RowBox[{"probabilities","=",RowBox[{"Delete","[",RowBox[{"probabilities",",","min"}],"]"}]}],";"}],"\n",RowBox[
-{RowBox[{"sampleSpace","=",RowBox[{"Delete","[",RowBox[{"sampleSpace",",","min"}],"]"}]}],";"}],RowBox[
-{"\n","\n"}],RowBox[{"bottomfivenames"," ","="," ",RowBox[{"Reverse","[","bottomfivenames","]"}]}],"\n",RowBox[
+{"\n","\n"}],RowBox[{RowBox[{"(*",RowBox[{RowBox[{"min","=",RowBox[{RowBox[{RowBox[
+{"First","[",RowBox[{"First","[",RowBox[{"Position","[",RowBox[{"probabilities",",",RowBox[
+{"Min","[","probabilities","]"}]}],"]"}],"]"}],"]"}],"\n","bottomfivenames"}],"=",RowBox[
+{RowBox[{RowBox[{"Append","[",RowBox[{"bottomfivenames",",",RowBox[{"Part","[",RowBox[
+{"sampleSpace",",","min"}],"]"}]}],"]"}],"\n","bottomfiveprobs"}],"=",RowBox[{RowBox[
+{RowBox[{"Append","[",RowBox[{"bottomfiveprobs",",",RowBox[{"Part","[",RowBox[{"probabilities",",","min"}],"]"}]}],"]"}],"\n","probabilities"}],"=",RowBox[
+{"Delete","[",RowBox[{"probabilities",",","min"}],"]"}]}]}]}]}],";","\n",RowBox[{"sampleSpace","=",RowBox[
+{"Delete","[",RowBox[{"sampleSpace",",","min"}],"]"}]}],";","\n","\n",RowBox[{"min","=",RowBox[
+{RowBox[{RowBox[{"First","[",RowBox[{"First","[",RowBox[{"Position","[",RowBox[{"probabilities",",",RowBox[
+{"Min","[","probabilities","]"}]}],"]"}],"]"}],"]"}],"\n","bottomfivenames"}],"=",RowBox[
+{RowBox[{RowBox[{"Append","[",RowBox[{"bottomfivenames",",",RowBox[{"Part","[",RowBox[
+{"sampleSpace",",","min"}],"]"}]}],"]"}],"\n","bottomfiveprobs"}],"=",RowBox[{RowBox[
+{RowBox[{"Append","[",RowBox[{"bottomfiveprobs",",",RowBox[{"Part","[",RowBox[{"probabilities",",","min"}],"]"}]}],"]"}],"\n","probabilities"}],"=",RowBox[
+{"Delete","[",RowBox[{"probabilities",",","min"}],"]"}]}]}]}]}],";","\n",RowBox[{"sampleSpace","=",RowBox[
+{"Delete","[",RowBox[{"sampleSpace",",","min"}],"]"}]}],";"}],"*)"}],"\n","\n",RowBox[
+{"bottomfivenames"," ","="," ",RowBox[{"Reverse","[","bottomfivenames","]"}]}]}],"\n",RowBox[
 {RowBox[{"bottomfiveprobs"," ","="," ",RowBox[{"Reverse","[","bottomfiveprobs","]"}]}],"\n"}]}],
-"Input",CellLabel -> "In[165]:= ",ExpressionUUID -> "b6c55756-d5e9-4eb9-813b-7270ac7bd097"],Cell[
+"Input",CellLabel -> "In[182]:= ",ExpressionUUID -> "b6c55756-d5e9-4eb9-813b-7270ac7bd097"],Cell[
 BoxData[
-RowBox[{"{","}"}],StandardForm],"Output",CellLabel -> "Out[165]= ",ExpressionUUID -> "c3109cb4-ef89-47a4-9b70-75446a833822"],Cell[
+RowBox[{"{","}"}],StandardForm],"Output",CellLabel -> "Out[182]= ",ExpressionUUID -> "57076912-3b0a-4337-90de-e904c82f8975"],Cell[
 BoxData[
-RowBox[{"{","}"}],StandardForm],"Output",CellLabel -> "Out[166]= ",ExpressionUUID -> "48760538-b5f6-4ed9-abe4-622de1537de9"],Cell[
+RowBox[{"{","}"}],StandardForm],"Output",CellLabel -> "Out[183]= ",ExpressionUUID -> "c6c9d9a5-1528-4b62-9fa0-7f51e09650cb"],Cell[
 BoxData[
-"11",StandardForm],"Output",CellLabel -> "Out[167]= ",ExpressionUUID -> "3aee73b8-c670-4c12-86bc-9a19b023dc99"],Cell[
+"11",StandardForm],"Output",CellLabel -> "Out[184]= ",ExpressionUUID -> "03e5708d-c375-4a98-9a69-018fb0d12721"],Cell[
 BoxData[
-RowBox[{"{","\"Jail / Just Visiting\"","}"}],StandardForm],"Output",CellLabel -> "Out[168]= ",
-ExpressionUUID -> "633c5545-29e9-46b0-ad9d-d4c15edbb692"],Cell[
+RowBox[{"{","\"Jail / Just Visiting\"","}"}],StandardForm],"Output",CellLabel -> "Out[185]= ",
+ExpressionUUID -> "68cd7896-3568-459b-9829-5886374f60be"],Cell[
 BoxData[RowBox[{"{","0.05222033155662649`","}"}],
-StandardForm],"Output",CellLabel -> "Out[169]= ",ExpressionUUID -> "8a682aae-809f-4a4d-8607-3b8ea47ee962"],Cell[
+StandardForm],"Output",CellLabel -> "Out[186]= ",ExpressionUUID -> "b57f0f3b-5397-48a3-9107-a504ccc4efa0"],Cell[
 BoxData[
-"17",StandardForm],"Output",CellLabel -> "Out[172]= ",ExpressionUUID -> "fa04f533-d050-4e91-870a-3db217c1f579"],Cell[
+"17",StandardForm],"Output",CellLabel -> "Out[189]= ",ExpressionUUID -> "261922d1-f4a4-48d5-b342-58fcc3aad847"],Cell[
 BoxData[
 RowBox[{"{",RowBox[{"\"Jail / Just Visiting\"",",","\"Community Chest 2\""}],"}"}],
-StandardForm],"Output",CellLabel -> "Out[173]= ",ExpressionUUID -> "6b67a93d-3afd-4829-9f4f-47fe8d344008"],Cell[
+StandardForm],"Output",CellLabel -> "Out[190]= ",ExpressionUUID -> "bf972e1b-338e-4bff-aa3d-e74bb45a25b6"],Cell[
 BoxData[
 RowBox[{"{",RowBox[{"0.05222033155662649`",",","0.03724968896388439`"}],"}"}],StandardForm],
-"Output",CellLabel -> "Out[174]= ",ExpressionUUID -> "d85530cd-38b3-44a4-ae65-2220f54acca1"],Cell[
+"Output",CellLabel -> "Out[191]= ",ExpressionUUID -> "2b7daa4d-4a35-4daa-b2fc-fe9db16df7b1"],Cell[
 BoxData[
-"17",StandardForm],"Output",CellLabel -> "Out[177]= ",ExpressionUUID -> "0b2a05dd-94b0-49bb-87fe-071d4159490c"],Cell[
+"17",StandardForm],"Output",CellLabel -> "Out[194]= ",ExpressionUUID -> "92806d45-9458-4e1a-ae28-030dfb2e51a2"],Cell[
 BoxData[
 RowBox[{"{",RowBox[{"\"Jail / Just Visiting\"",",","\"Community Chest 2\"",",","\"Tennessee Avenue\""}],"}"}],
-StandardForm],"Output",CellLabel -> "Out[178]= ",ExpressionUUID -> "bef5b88c-810f-4b48-844f-3e13690d7ac7"],Cell[
+StandardForm],"Output",CellLabel -> "Out[195]= ",ExpressionUUID -> "b2831bd0-ac8f-465d-8c65-3ebf0f0de694"],Cell[
 BoxData[
 RowBox[{"{",RowBox[{"0.05222033155662649`",",","0.03724968896388439`",",","0.03609593490237231`"}],"}"}],
-StandardForm],"Output",CellLabel -> "Out[179]= ",ExpressionUUID -> "d89da58d-5f0a-47c3-92df-a718a38ca29a"],Cell[
+StandardForm],"Output",CellLabel -> "Out[196]= ",ExpressionUUID -> "255735bd-b32d-499d-ae9e-2f096935e2dd"],Cell[
 BoxData[
-"17",StandardForm],"Output",CellLabel -> "Out[182]= ",ExpressionUUID -> "cc15c364-35d7-4963-8037-c56e65332760"],Cell[
+"17",StandardForm],"Output",CellLabel -> "Out[199]= ",ExpressionUUID -> "15c65e9a-7853-4635-b04d-f97bbee0a653"],Cell[
 BoxData[
 RowBox[{"{",RowBox[{"\"Jail / Just Visiting\"",",","\"Community Chest 2\"",",","\"Tennessee Avenue\"",",","\"New York Avenue\""}],"}"}],
-StandardForm],"Output",CellLabel -> "Out[183]= ",ExpressionUUID -> "527a77bc-f3ad-4e41-8efc-deeed8db240a"],Cell[
+StandardForm],"Output",CellLabel -> "Out[200]= ",ExpressionUUID -> "4b8bc5f3-9fed-437d-9ea7-a1cdcc0b9385"],Cell[
 BoxData[
 RowBox[{"{",RowBox[{"0.05222033155662649`",",","0.03724968896388439`",",","0.03609593490237231`",",","0.034204168328748834`"}],"}"}],
-StandardForm],"Output",CellLabel -> "Out[184]= ",ExpressionUUID -> "6ecd0048-e15e-4759-af59-0bba4625ece6"],Cell[
+StandardForm],"Output",CellLabel -> "Out[201]= ",ExpressionUUID -> "c0241fc6-ac05-4394-a8ce-49581f0d4eeb"],Cell[
 BoxData[
-"16",StandardForm],"Output",CellLabel -> "Out[187]= ",ExpressionUUID -> "6ea61f06-6c70-474d-bd4d-1db11972ad08"],Cell[
+"16",StandardForm],"Output",CellLabel -> "Out[204]= ",ExpressionUUID -> "cf1aac92-e491-4334-a24e-6c60eeba96c4"],Cell[
 BoxData[
 RowBox[{"{",RowBox[{"\"Jail / Just Visiting\"",",","\"Community Chest 2\"",",","\"Tennessee Avenue\"",",","\"New York Avenue\"",",","\"St. James Place\""}],"}"}],
-StandardForm],"Output",CellLabel -> "Out[188]= ",ExpressionUUID -> "83bb79f0-2ed2-4444-a89b-aa7a76e51b01"],Cell[
+StandardForm],"Output",CellLabel -> "Out[205]= ",ExpressionUUID -> "7b2dc0ef-dbca-4974-9cac-328380f06002"],Cell[
 BoxData[
 RowBox[{"{",RowBox[{"0.05222033155662649`",",","0.03724968896388439`",",","0.03609593490237231`",",","0.034204168328748834`",",","0.03401286268874282`"}],"}"}],
-StandardForm],"Output",CellLabel -> "Out[189]= ",ExpressionUUID -> "4c606a11-6eec-45a2-b9de-bae09477c0c8"],Cell[
+StandardForm],"Output",CellLabel -> "Out[206]= ",ExpressionUUID -> "325a6c10-7236-461d-ae75-36df6de31ea4"],Cell[
 BoxData[
-RowBox[{"{","}"}],StandardForm],"Output",CellLabel -> "Out[192]= ",ExpressionUUID -> "621192b5-24de-47ee-97d0-79766c52c8fc"],Cell[
+RowBox[{"{","}"}],StandardForm],"Output",CellLabel -> "Out[209]= ",ExpressionUUID -> "9cf73d95-2748-42fb-a4e5-510943bbf2cc"],Cell[
 BoxData[
-RowBox[{"{","}"}],StandardForm],"Output",CellLabel -> "Out[193]= ",ExpressionUUID -> "29061d45-e2fe-4911-b1cf-9ad08d177d0b"],Cell[
+RowBox[{"{","}"}],StandardForm],"Output",CellLabel -> "Out[210]= ",ExpressionUUID -> "fe0202f0-c697-4b62-8c0d-02f3cc0ad012"],Cell[
 BoxData[
-"26",StandardForm],"Output",CellLabel -> "Out[194]= ",ExpressionUUID -> "12dd627c-35ce-46c0-97cc-e16605e3b258"],Cell[
+"26",StandardForm],"Output",CellLabel -> "Out[211]= ",ExpressionUUID -> "fadb3af1-33a9-4459-959f-c8e06fb909fc"],Cell[
 BoxData[
-RowBox[{"{","\"Go to Jail\"","}"}],StandardForm],"Output",CellLabel -> "Out[195]= ",
-ExpressionUUID -> "fb74d1c5-17b7-453b-9ced-49e881dadecb"],Cell[
+RowBox[{"{","\"Go to Jail\"","}"}],StandardForm],"Output",CellLabel -> "Out[212]= ",
+ExpressionUUID -> "3e0d49cf-1caf-425f-905f-6c15ae70bf6d"],Cell[
 BoxData[RowBox[{"{","0.`","}"}],
-StandardForm],"Output",CellLabel -> "Out[196]= ",ExpressionUUID -> "d884d25f-2f6a-4f06-a9c9-d1c1e07b257a"],Cell[
+StandardForm],"Output",CellLabel -> "Out[213]= ",ExpressionUUID -> "d5fcca76-3ae1-4a23-aa21-2cd6b6020bbd"],Cell[
 BoxData[
-"1",StandardForm],"Output",CellLabel -> "Out[199]= ",ExpressionUUID -> "7f421dba-9a2a-41b7-ad96-6249a0573245"],Cell[
+"1",StandardForm],"Output",CellLabel -> "Out[216]= ",ExpressionUUID -> "85760067-616e-490c-9fe6-b08f400cc95e"],Cell[
 BoxData[
 RowBox[{"{",RowBox[{"\"Go to Jail\"",",","\"Go\""}],"}"}],StandardForm],"Output",
-CellLabel -> "Out[200]= ",ExpressionUUID -> "553aa93f-6646-4fb9-9824-a13f30e5443a"],Cell[
+CellLabel -> "Out[217]= ",ExpressionUUID -> "ce6f7d4c-cd44-4df3-9783-7cd134e4a553"],Cell[
 BoxData[
 RowBox[{"{",RowBox[{"0.`",",","0.015396919421630071`"}],"}"}],StandardForm],"Output",
-CellLabel -> "Out[201]= ",ExpressionUUID -> "5ac3d742-f6f9-45e6-a3b0-b9afd7a3dee0"],Cell[
+CellLabel -> "Out[218]= ",ExpressionUUID -> "dcf0d20b-6368-4966-8f93-04d1d2351c7a"],Cell[
 BoxData[
-"1",StandardForm],"Output",CellLabel -> "Out[204]= ",ExpressionUUID -> "66ae3188-5cc4-4e96-8d22-96bece4d3aaa"],Cell[
+"1",StandardForm],"Output",CellLabel -> "Out[221]= ",ExpressionUUID -> "5fd8b4b7-c3ea-4c56-a287-5886fab2be2a"],Cell[
 BoxData[
 RowBox[{"{",RowBox[{"\"Go to Jail\"",",","\"Go\"",",","\"Mediterranean Avenue\""}],"}"}],
-StandardForm],"Output",CellLabel -> "Out[205]= ",ExpressionUUID -> "4bfc06d6-5633-46dd-847a-2083a208f47b"],Cell[
+StandardForm],"Output",CellLabel -> "Out[222]= ",ExpressionUUID -> "b966a80e-1f45-40a7-adf3-96c5d2fea306"],Cell[
 BoxData[
 RowBox[{"{",RowBox[{"0.`",",","0.015396919421630071`",",","0.01568445215356357`"}],"}"}],
-StandardForm],"Output",CellLabel -> "Out[206]= ",ExpressionUUID -> "edb81905-c251-4c80-9b6f-4aefcfdf78e2"],Cell[
+StandardForm],"Output",CellLabel -> "Out[223]= ",ExpressionUUID -> "bd96f5d6-125c-4c63-945f-9a50f369ff13"],Cell[
 BoxData[
-"32",StandardForm],"Output",CellLabel -> "Out[209]= ",ExpressionUUID -> "3669191f-e49b-4317-89cf-3d217d6bb59d"],Cell[
+RowBox[{"{",RowBox[{"\"Mediterranean Avenue\"",",","\"Go\"",",","\"Go to Jail\""}],"}"}],
+StandardForm],"Output",CellLabel -> "Out[226]= ",ExpressionUUID -> "f216ce22-79d6-4d5b-ad35-805ad9acf9bc"],Cell[
 BoxData[
-RowBox[{"{",RowBox[{"\"Go to Jail\"",",","\"Go\"",",","\"Mediterranean Avenue\"",",","\"Boardwalk\""}],"}"}],
-StandardForm],"Output",CellLabel -> "Out[210]= ",ExpressionUUID -> "d30b5147-fcee-40cd-9d55-507d2f704eb9"],Cell[
-BoxData[
-RowBox[{"{",RowBox[{"0.`",",","0.015396919421630071`",",","0.01568445215356357`",",","0.016605678292199662`"}],"}"}],
-StandardForm],"Output",CellLabel -> "Out[211]= ",ExpressionUUID -> "50c397cf-e015-4803-b66b-bf7ec037efdf"],Cell[
-BoxData[
-"1",StandardForm],"Output",CellLabel -> "Out[214]= ",ExpressionUUID -> "504c3593-af55-4789-8f1d-6b58d8b2edfd"],Cell[
-BoxData[
-RowBox[{"{",RowBox[{"\"Go to Jail\"",",","\"Go\"",",","\"Mediterranean Avenue\"",",","\"Boardwalk\"",",","\"Community Chest 1\""}],"}"}],
-StandardForm],"Output",CellLabel -> "Out[215]= ",ExpressionUUID -> "9d885646-cf04-44b7-a887-20dbd8c4b02b"],Cell[
-BoxData[
-RowBox[{"{",RowBox[{"0.`",",","0.015396919421630071`",",","0.01568445215356357`",",","0.016605678292199662`",",","0.017532626267465122`"}],"}"}],
-StandardForm],"Output",CellLabel -> "Out[216]= ",ExpressionUUID -> "5ced571c-b7c6-4238-b838-1b7c966f7c2c"],Cell[
-BoxData[
-RowBox[{"{",RowBox[{"\"Community Chest 1\"",",","\"Boardwalk\"",",","\"Mediterranean Avenue\"",",","\"Go\"",",","\"Go to Jail\""}],"}"}],
-StandardForm],"Output",CellLabel -> "Out[219]= ",ExpressionUUID -> "f32ba031-f953-4bae-bbf6-2c5214df832f"],Cell[
-BoxData[
-RowBox[{"{",RowBox[{"0.017532626267465122`",",","0.016605678292199662`",",","0.01568445215356357`",",","0.015396919421630071`",",","0.`"}],"}"}],
-StandardForm],"Output",CellLabel -> "Out[220]= ",ExpressionUUID -> "aefe7d62-097f-420e-8bc5-51b2e88439ea"]},
-Open],ExpressionUUID -> "8e8929b5-a7e1-4d36-a144-7ef6b1fe3827"],Cell[
+RowBox[{"{",RowBox[{"0.01568445215356357`",",","0.015396919421630071`",",","0.`"}],"}"}],
+StandardForm],"Output",CellLabel -> "Out[227]= ",ExpressionUUID -> "9af1dd5c-fef8-458b-838d-096123848f22"]},
+Open],ExpressionUUID -> "bccdbdf7-2592-4b90-b1d2-c630680692b8"],Cell[
 CellGroupData[
 {Cell[
 BoxData[""],"Input",ExpressionUUID -> "d052f8e4-2741-42b6-9443-555a75fd11bf"],Cell[
@@ -222,36 +207,36 @@ BoxData[
 ""],"Input",ExpressionUUID -> "4f8bf87b-f582-4268-bed9-39ff72dd2e02"],Cell[
 CellGroupData[
 {Cell[
-BoxData[RowBox[{"BarChart","[",RowBox[{"topfiveprobs",","," ",RowBox[{"ChartLabels"," ","\[Rule]",RowBox[
-{"Placed","[",RowBox[{"topfivenames",","," ","Below",","," ",RowBox[{RowBox[{"Rotate","[",RowBox[
-{"#",","," ",RowBox[{"80"," ","Degree"}]}],"]"}]," ","&"}]}],"]"}]}]}],"]"}]],"Input",
-CellLabel -> "In[221]:= ",ExpressionUUID -> "5e8dc1e2-3b60-4383-8cc1-2caadca6c8ff"],Cell[
+BoxData[RowBox[{"BarChart","[",RowBox[{"topfiveprobs",",",RowBox[{"BarSpacing"," ","\[Rule]"," ","Large"}],","," ",RowBox[
+{"ChartLabels"," ","\[Rule]",RowBox[{"Placed","[",RowBox[{"topfivenames",","," ","Below",","," ",RowBox[
+{RowBox[{"Rotate","[",RowBox[{"#",","," ",RowBox[{"80"," ","Degree"}]}],"]"}]," ","&"}]}],"]"}]}]}],"]"}]],
+"Input",CellLabel -> "In[229]:= ",ExpressionUUID -> "5e8dc1e2-3b60-4383-8cc1-2caadca6c8ff"],Cell[
 BoxData[
-GraphicsBox[{{Opacity[0],PointBox[{{0.45075018208302986`,0.`},{5.451201747997087`,0.`}}]},{{},{Directive[
+GraphicsBox[{{Opacity[0],PointBox[{{0.5733333333333333`,0.`},{5.333333333333334`,0.`}}]},{{},{Directive[
 EdgeForm[Directive[Thickness[Small],Opacity[0.6649999999999999`]]],RGBColor[0.982864`,
 0.7431472`,0.3262672`]],{{Directive[EdgeForm[Directive[Thickness[Small],Opacity[0.6649999999999999`]]],
 RGBColor[0.982864`,0.7431472`,0.3262672`]],TagBox[TooltipBox[TagBox[RectangleBox[
-{0.5487982520029133`,0.`},{1.4512017479970867`,0.05222033155662649`},"RoundingRadius" -> 0],
+{0.6666666666666666`,0.`},{1.3333333333333335`,0.05222033155662649`},"RoundingRadius" -> 0],
 Function[StatusArea[Slot[1],0.05222033155662649`]],TagBoxNote -> "0.05222033155662649"],
 StyleBox["0.05222033155662649`",{},StripOnInput -> False]],Function[Annotation[Slot[
 1],Style[0.05222033155662649`,{}],"Tooltip"]]]},{Directive[EdgeForm[Directive[Thickness[
 Small],Opacity[0.6649999999999999`]]],RGBColor[0.982864`,0.7431472`,0.3262672`]],TagBox[
-TooltipBox[TagBox[RectangleBox[{1.5487982520029133`,0.`},{2.4512017479970867`,0.03724968896388439`},
+TooltipBox[TagBox[RectangleBox[{1.6666666666666667`,0.`},{2.3333333333333335`,0.03724968896388439`},
 "RoundingRadius" -> 0],Function[StatusArea[Slot[1],0.03724968896388439`]],TagBoxNote -> "0.03724968896388439"],
 StyleBox["0.03724968896388439`",{},StripOnInput -> False]],Function[Annotation[Slot[
 1],Style[0.03724968896388439`,{}],"Tooltip"]]]},{Directive[EdgeForm[Directive[Thickness[
 Small],Opacity[0.6649999999999999`]]],RGBColor[0.982864`,0.7431472`,0.3262672`]],TagBox[
-TooltipBox[TagBox[RectangleBox[{2.5487982520029133`,0.`},{3.4512017479970867`,0.03609593490237231`},
+TooltipBox[TagBox[RectangleBox[{2.666666666666667`,0.`},{3.333333333333334`,0.03609593490237231`},
 "RoundingRadius" -> 0],Function[StatusArea[Slot[1],0.03609593490237231`]],TagBoxNote -> "0.03609593490237231"],
 StyleBox["0.03609593490237231`",{},StripOnInput -> False]],Function[Annotation[Slot[
 1],Style[0.03609593490237231`,{}],"Tooltip"]]]},{Directive[EdgeForm[Directive[Thickness[
 Small],Opacity[0.6649999999999999`]]],RGBColor[0.982864`,0.7431472`,0.3262672`]],TagBox[
-TooltipBox[TagBox[RectangleBox[{3.5487982520029133`,0.`},{4.451201747997087`,0.034204168328748834`},
+TooltipBox[TagBox[RectangleBox[{3.6666666666666674`,0.`},{4.333333333333334`,0.034204168328748834`},
 "RoundingRadius" -> 0],Function[StatusArea[Slot[1],0.034204168328748834`]],TagBoxNote -> "0.034204168328748834"],
 StyleBox["0.034204168328748834`",{},StripOnInput -> False]],Function[Annotation[Slot[
 1],Style[0.034204168328748834`,{}],"Tooltip"]]]},{Directive[EdgeForm[Directive[Thickness[
 Small],Opacity[0.6649999999999999`]]],RGBColor[0.982864`,0.7431472`,0.3262672`]],TagBox[
-TooltipBox[TagBox[RectangleBox[{4.548798252002913`,0.`},{5.451201747997087`,0.03401286268874282`},
+TooltipBox[TagBox[RectangleBox[{4.666666666666667`,0.`},{5.333333333333334`,0.03401286268874282`},
 "RoundingRadius" -> 0],Function[StatusArea[Slot[1],0.03401286268874282`]],TagBoxNote -> "0.03401286268874282"],
 StyleBox["0.03401286268874282`",{},StripOnInput -> False]],Function[Annotation[Slot[
 1],Style[0.03401286268874282`,{}],"Tooltip"]]]}}},{},{}},{},{InsetBox[FormBox[StyleBox[
@@ -260,79 +245,66 @@ TraditionalForm],Offset[{0,-4},{1.`,0.`}],ImageScaled[{0.5`,1}]],InsetBox[FormBo
 StyleBox[RotationBox["\"Community Chest 2\"",BoxRotation -> 1.3962634015954636`],
 {},StripOnInput -> False],TraditionalForm],Offset[{0,-4},{2.`,0.`}],ImageScaled[{0.5`,1}]],InsetBox[
 FormBox[StyleBox[RotationBox["\"Tennessee Avenue\"",BoxRotation -> 1.3962634015954636`],
-{},StripOnInput -> False],TraditionalForm],Offset[{0,-4},{3.`,0.`}],ImageScaled[{0.5`,1}]],InsetBox[
-FormBox[StyleBox[RotationBox["\"New York Avenue\"",BoxRotation -> 1.3962634015954636`],
-{},StripOnInput -> False],TraditionalForm],Offset[{0,-4},{4.`,0.`}],ImageScaled[{0.5`,1}]],InsetBox[
-FormBox[StyleBox[RotationBox["\"St. James Place\"",BoxRotation -> 1.3962634015954636`],
-{},StripOnInput -> False],TraditionalForm],Offset[{0,-4},{5.`,0.`}],ImageScaled[{0.5`,1}]]},{},{},{StyleBox[
-{Antialiasing -> False,{Directive[Thickness[Tiny]],{LineBox[{{0.45075018208302986`,0.`},{5.551210779315368`,0.`}}]},StyleBox[
+{},StripOnInput -> False],TraditionalForm],Offset[{0,-4},{3.0000000000000004`,0.`}],
+ImageScaled[{0.5`,1}]],InsetBox[FormBox[StyleBox[RotationBox["\"New York Avenue\"",
+BoxRotation -> 1.3962634015954636`],{},StripOnInput -> False],TraditionalForm],Offset[
+{0,-4},{4.000000000000001`,0.`}],ImageScaled[{0.5`,1}]],InsetBox[FormBox[StyleBox[
+RotationBox["\"St. James Place\"",BoxRotation -> 1.3962634015954636`],{},StripOnInput -> False],
+TraditionalForm],Offset[{0,-4},{5.`,0.`}],ImageScaled[{0.5`,1}]]},{},{},{StyleBox[
+{Antialiasing -> False,{Directive[Thickness[Tiny]],{LineBox[{{0.5733333333333333`,0.`},{5.428533333333335`,0.`}}]},StyleBox[
 {},{"GraphicsLabel"},StripOnInput -> False]},StyleBox[{{Directive[Thickness[Tiny]],LineBox[
-{{0.5487982520029133`,0.`},Offset[{-1.102182119232618`*^-15,-6.`},{0.5487982520029133`,0.`}]}],LineBox[
-{{5.451201747997087`,0.`},Offset[{-1.102182119232618`*^-15,-6.`},{5.451201747997087`,0.`}]}],{{},{},{},{},{},{},{}}},StyleBox[
+{{0.6666666666666666`,0.`},Offset[{-1.102182119232618`*^-15,-6.`},{0.6666666666666666`,0.`}]}],LineBox[
+{{5.333333333333335`,0.`},Offset[{-1.102182119232618`*^-15,-6.`},{5.333333333333335`,0.`}]}],{{},{},{},{},{},{},{}}},StyleBox[
 {},{"GraphicsLabel"},StripOnInput -> False]},{"GraphicsTicks"},StripOnInput -> False]},
 {"GraphicsAxes"},StripOnInput -> False]}},{DisplayFunction -> Identity,AspectRatio -> NCache[
-Power[GoldenRatio,-1],0.6180339887498948`],Axes -> {False,True},AxesLabel -> {None,None},AxesOrigin -> {0.45075018208302986`,0.`},CoordinatesToolOptions -> CompressedData[
+Power[GoldenRatio,-1],0.6180339887498948`],Axes -> {False,True},AxesLabel -> {None,None},AxesOrigin -> {0.5733333333333333`,0.`},CoordinatesToolOptions -> CompressedData[
 "1:eJxTTMoPSmNiYGAoZgESPpnFJQheUGlOajA/kOGSWVyQk1jpVpqXXJKZn5fGCFLBASTgIqgmwOU9U1LzSjJLKhHyAYlFUHkQLzgnvyQTxAMT5OgDKUBzsTCQ4ZxfkJmaEpaYU5o6WF0NAFk5TEk="],FrameLabel -> {{None,None},{None,None}},FrameTicks -> {{Automatic,Automatic},{Automatic,Automatic}},GridLines -> {None,None},GridLinesStyle -> Directive[
 GrayLevel[0.5`,0.4`]],PlotRange -> {{All,All},{All,All}},PlotRangePadding -> {{Scaled[
 0.02`],Scaled[0.02`]},{Scaled[0.02`],Scaled[0.05`]}},Ticks -> {None,Automatic}}],
-StandardForm],"Output",CellLabel -> "Out[221]= ",ExpressionUUID -> "4e89610b-b9e9-4045-a42a-7cb29d38e932"]},
-Open],ExpressionUUID -> "0fd190b9-0fb1-4970-b778-d0f520a5ed1a"],Cell[
+StandardForm],"Output",CellLabel -> "Out[229]= ",ExpressionUUID -> "3b651a53-e95a-4f1d-b289-6d7f9c6ef206"]},
+Open],ExpressionUUID -> "cbb1303b-7d0b-4932-9f63-66710dbef0b2"],Cell[
 CellGroupData[
 {Cell[
-BoxData[RowBox[{"BarChart","[",RowBox[{"bottomfiveprobs",","," ",RowBox[{"ChartLabels"," ","\[Rule]",RowBox[
-{"Placed","[",RowBox[{"bottomfivenames",","," ","Below",","," ",RowBox[{RowBox[{"Rotate","[",RowBox[
-{"#",","," ",RowBox[{"80"," ","Degree"}]}],"]"}]," ","&"}]}],"]"}]}]}],"]"}]],"Input",
-CellLabel -> "In[222]:= ",ExpressionUUID -> "e67b7336-867e-4bf3-a9d0-fe7fb488147c"],Cell[
+BoxData[RowBox[{"BarChart","[",RowBox[{"bottomfiveprobs",","," ",RowBox[{"BarSpacing"," ","\[Rule]"," ","Large"}],",",RowBox[
+{"ChartLabels"," ","\[Rule]",RowBox[{"Placed","[",RowBox[{"bottomfivenames",","," ","Below",","," ",RowBox[
+{RowBox[{"Rotate","[",RowBox[{"#",","," ",RowBox[{"80"," ","Degree"}]}],"]"}]," ","&"}]}],"]"}]}]}],"]"}]],
+"Input",CellLabel -> "In[230]:= ",ExpressionUUID -> "e67b7336-867e-4bf3-a9d0-fe7fb488147c"],Cell[
 BoxData[
-GraphicsBox[{{Opacity[0],PointBox[{{0.45075018208302986`,0.`},{5.451201747997087`,0.`}}]},{{},{Directive[
-EdgeForm[Directive[Thickness[Small],Opacity[0.6649999999999999`]]],RGBColor[0.982864`,
-0.7431472`,0.3262672`]],{{Directive[EdgeForm[Directive[Thickness[Small],Opacity[0.6649999999999999`]]],
+GraphicsBox[{{Opacity[0],PointBox[{{-0.053333333333333455`,0.`},{4.000000000000001`,0.`}}]},{{},{Directive[
+EdgeForm[Directive[Thickness[Small],Opacity[0.6789999999999999`]]],RGBColor[0.982864`,
+0.7431472`,0.3262672`]],{{Directive[EdgeForm[Directive[Thickness[Small],Opacity[0.6789999999999999`]]],
 RGBColor[0.982864`,0.7431472`,0.3262672`]],TagBox[TooltipBox[TagBox[RectangleBox[
-{0.5487982520029133`,0.`},{1.4512017479970867`,0.017532626267465122`},"RoundingRadius" -> 0],
-Function[StatusArea[Slot[1],0.017532626267465122`]],TagBoxNote -> "0.017532626267465122"],
-StyleBox["0.017532626267465122`",{},StripOnInput -> False]],Function[Annotation[Slot[
-1],Style[0.017532626267465122`,{}],"Tooltip"]]]},{Directive[EdgeForm[Directive[Thickness[
-Small],Opacity[0.6649999999999999`]]],RGBColor[0.982864`,0.7431472`,0.3262672`]],TagBox[
-TooltipBox[TagBox[RectangleBox[{1.5487982520029133`,0.`},{2.4512017479970867`,0.016605678292199662`},
-"RoundingRadius" -> 0],Function[StatusArea[Slot[1],0.016605678292199662`]],TagBoxNote -> "0.016605678292199662"],
-StyleBox["0.016605678292199662`",{},StripOnInput -> False]],Function[Annotation[Slot[
-1],Style[0.016605678292199662`,{}],"Tooltip"]]]},{Directive[EdgeForm[Directive[Thickness[
-Small],Opacity[0.6649999999999999`]]],RGBColor[0.982864`,0.7431472`,0.3262672`]],TagBox[
-TooltipBox[TagBox[RectangleBox[{2.5487982520029133`,0.`},{3.4512017479970867`,0.01568445215356357`},
-"RoundingRadius" -> 0],Function[StatusArea[Slot[1],0.01568445215356357`]],TagBoxNote -> "0.01568445215356357"],
+{0.6666666666666666`,0.`},{1.3333333333333335`,0.01568445215356357`},"RoundingRadius" -> 0],
+Function[StatusArea[Slot[1],0.01568445215356357`]],TagBoxNote -> "0.01568445215356357"],
 StyleBox["0.01568445215356357`",{},StripOnInput -> False]],Function[Annotation[Slot[
 1],Style[0.01568445215356357`,{}],"Tooltip"]]]},{Directive[EdgeForm[Directive[Thickness[
-Small],Opacity[0.6649999999999999`]]],RGBColor[0.982864`,0.7431472`,0.3262672`]],TagBox[
-TooltipBox[TagBox[RectangleBox[{3.5487982520029133`,0.`},{4.451201747997087`,0.015396919421630071`},
+Small],Opacity[0.6789999999999999`]]],RGBColor[0.982864`,0.7431472`,0.3262672`]],TagBox[
+TooltipBox[TagBox[RectangleBox[{1.6666666666666667`,0.`},{2.3333333333333335`,0.015396919421630071`},
 "RoundingRadius" -> 0],Function[StatusArea[Slot[1],0.015396919421630071`]],TagBoxNote -> "0.015396919421630071"],
 StyleBox["0.015396919421630071`",{},StripOnInput -> False]],Function[Annotation[Slot[
 1],Style[0.015396919421630071`,{}],"Tooltip"]]]},{Directive[EdgeForm[Directive[Thickness[
-Small],Opacity[0.6649999999999999`]]],RGBColor[0.982864`,0.7431472`,0.3262672`]],TagBox[
-TooltipBox[TagBox[RectangleBox[{4.548798252002913`,0.`},{5.451201747997087`,0.`},
+Small],Opacity[0.6789999999999999`]]],RGBColor[0.982864`,0.7431472`,0.3262672`]],TagBox[
+TooltipBox[TagBox[RectangleBox[{2.666666666666667`,0.`},{3.333333333333334`,0.`},
 "RoundingRadius" -> 0],Function[StatusArea[Slot[1],0.`]],TagBoxNote -> "0."],StyleBox[
 "0.`",{},StripOnInput -> False]],Function[Annotation[Slot[1],Style[0.`,{}],"Tooltip"]]]}}},{},{}},{},{InsetBox[
-FormBox[StyleBox[RotationBox["\"Community Chest 1\"",BoxRotation -> 1.3962634015954636`],
-{},StripOnInput -> False],TraditionalForm],Offset[{0,-4},{1.`,0.`}],ImageScaled[{0.5`,1}]],InsetBox[
-FormBox[StyleBox[RotationBox["\"Boardwalk\"",BoxRotation -> 1.3962634015954636`],
-{},StripOnInput -> False],TraditionalForm],Offset[{0,-4},{2.`,0.`}],ImageScaled[{0.5`,1}]],InsetBox[
 FormBox[StyleBox[RotationBox["\"Mediterranean Avenue\"",BoxRotation -> 1.3962634015954636`],
-{},StripOnInput -> False],TraditionalForm],Offset[{0,-4},{3.`,0.`}],ImageScaled[{0.5`,1}]],InsetBox[
+{},StripOnInput -> False],TraditionalForm],Offset[{0,-4},{1.`,0.`}],ImageScaled[{0.5`,1}]],InsetBox[
 FormBox[StyleBox[RotationBox["\"Go\"",BoxRotation -> 1.3962634015954636`],{},StripOnInput -> False],
-TraditionalForm],Offset[{0,-4},{4.`,0.`}],ImageScaled[{0.5`,1}]],InsetBox[FormBox[
+TraditionalForm],Offset[{0,-4},{2.`,0.`}],ImageScaled[{0.5`,1}]],InsetBox[FormBox[
 StyleBox[RotationBox["\"Go to Jail\"",BoxRotation -> 1.3962634015954636`],{},StripOnInput -> False],
-TraditionalForm],Offset[{0,-4},{5.`,0.`}],ImageScaled[{0.5`,1}]]},{},{},{StyleBox[
-{Antialiasing -> False,{Directive[Thickness[Tiny]],{LineBox[{{0.45075018208302986`,0.`},{5.551210779315368`,0.`}}]},StyleBox[
+TraditionalForm],Offset[{0,-4},{3.0000000000000004`,0.`}],ImageScaled[{0.5`,1}]]},{},{},{StyleBox[
+{Antialiasing -> False,{Directive[Thickness[Tiny]],{LineBox[{{-0.053333333333333455`,0.`},{4.067733333333334`,0.`}}]},StyleBox[
 {},{"GraphicsLabel"},StripOnInput -> False]},StyleBox[{{Directive[Thickness[Tiny]],LineBox[
-{{0.5487982520029133`,0.`},Offset[{-1.102182119232618`*^-15,-6.`},{0.5487982520029133`,0.`}]}],LineBox[
-{{5.451201747997087`,0.`},Offset[{-1.102182119232618`*^-15,-6.`},{5.451201747997087`,0.`}]}],{{},{},{},{},{},{},{}}},StyleBox[
+{{0.6666666666666666`,0.`},Offset[{-1.102182119232618`*^-15,-6.`},{0.6666666666666666`,0.`}]}],LineBox[
+{{3.333333333333334`,0.`},Offset[{-1.102182119232618`*^-15,-6.`},{3.333333333333334`,0.`}]}],{{},{},{},{},{}}},StyleBox[
 {},{"GraphicsLabel"},StripOnInput -> False]},{"GraphicsTicks"},StripOnInput -> False]},
 {"GraphicsAxes"},StripOnInput -> False]}},{DisplayFunction -> Identity,AspectRatio -> NCache[
-Power[GoldenRatio,-1],0.6180339887498948`],Axes -> {False,True},AxesLabel -> {None,None},AxesOrigin -> {0.45075018208302986`,0.`},CoordinatesToolOptions -> CompressedData[
+Power[GoldenRatio,-1],0.6180339887498948`],Axes -> {False,True},AxesLabel -> {None,None},AxesOrigin -> {-0.053333333333333455`,0.`},CoordinatesToolOptions -> CompressedData[
 "1:eJxTTMoPSmNiYGAoZgESPpnFJQheUGlOajA/kOGSWVyQk1jpVpqXXJKZn5fGCFLBASTgIqgmwOU9U1LzSjJLKhHyAYlFUHkQLzgnvyQTxAMT5OgDKUBzsTCQ4ZxfkJmaEpaYU5o6WF0NAFk5TEk="],FrameLabel -> {{None,None},{None,None}},FrameTicks -> {{Automatic,Automatic},{Automatic,Automatic}},GridLines -> {None,None},GridLinesStyle -> Directive[
 GrayLevel[0.5`,0.4`]],PlotRange -> {{All,All},{All,All}},PlotRangePadding -> {{Scaled[
 0.02`],Scaled[0.02`]},{Scaled[0.02`],Scaled[0.05`]}},Ticks -> {None,Automatic}}],
-StandardForm],"Output",CellLabel -> "Out[222]= ",ExpressionUUID -> "e355c289-48d1-4d8d-ae01-3be44c2e327a"]},
-Open],ExpressionUUID -> "431e5534-f38b-4262-9949-63a6e0a2b11f"],Cell[
+StandardForm],"Output",CellLabel -> "Out[230]= ",ExpressionUUID -> "5326bb5f-6222-405c-9d4d-c8c664d90135"]},
+Open],ExpressionUUID -> "0b8c91e6-6d19-4abc-aad2-4671289a5e54"],Cell[
 BoxData[""],
 "Input",CellLabel -> "In[101]:= ",ExpressionUUID -> "25cc2638-9582-480b-9543-7ea70e0fcbd5"],Cell[
 BoxData[
