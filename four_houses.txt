@@ -1,0 +1,8 @@
+Mediterranean Avenue: 1530.66624
+Oriental Avenue: 2214.2656
+St. Charles Place: 2385.266875
+St. James Place: 3462.59025
+Kentucky Avenue: 3390.6875
+Atlantic Avenue: 3099.63435
+Pacific Avenue: 3307.4267
+Park Place: 2857.7704
